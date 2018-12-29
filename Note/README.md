@@ -1,9 +1,9 @@
 >From EUGENE W. MYERS Department of Computer Science, University of Arizona, Tucson, AZ
 
 ### Abstract
-Simple O(ND) time and space algorithm is developed where
-N : A + B
-D : size of minimum edit script for A and B
+Simple O(ND) time and space algorithm is developed where: <br />
+N : A + B <br />
+D : size of minimum edit script for A and B <br />
 E(T) = O(N+D^2) basic stochastic model
 * [Stochastic Model](https://en.wikipedia.org/wiki/Stochastic_modelling_(insurance))
 
