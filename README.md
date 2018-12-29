@@ -8,5 +8,5 @@
 - [ ] TBD
 
 ### Note
-Research on js diff algorithm and own app to practice
-[Folder Link](Note/README.md)
+Research on js diff algorithm and own app to practice <br />
+[Research key points](Note/README.md)
