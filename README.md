@@ -1,6 +1,6 @@
 # CW_JS_Diff Application.
 >Possibly using React or Angular
-
+>[Motive](https://github.com/kpdecker/jsdiff)
 ### TODO
 - [ ] Research on Difference Algorithm and Its Variations
 - [ ] Construct basic running app on Angualr 
