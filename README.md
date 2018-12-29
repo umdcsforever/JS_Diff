@@ -1,4 +1,4 @@
-# CW_JS_Diff Application.
+#JS_Diff Application
 >[Motive and Reference](https://github.com/kpdecker/jsdiff)
 
 ### TODO
