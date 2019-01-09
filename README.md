@@ -10,7 +10,7 @@
 Research on js diff algorithm and own app to practice <br />
 [Research key points](Note/README.md)
 
-### TODO
+## TODO List
 - [ ] Research on Difference Algorithm and its Variation
 - [x] Construct basic running app on Angualr 
   - [ ] M.E.A.N Stack Environment Setup
