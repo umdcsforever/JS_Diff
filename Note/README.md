@@ -9,3 +9,4 @@ E(T) = O(N+D^2) basic stochastic model
 *[Stochastic Model]()
 
 refindment of algorithem requires only O(N) space and use of suffix trees leading to O(N * lg(N) + D^2)
+
