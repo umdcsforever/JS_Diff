@@ -17,4 +17,4 @@ Research on js diff algorithm and own app to practice <br />
 - [ ] Construct basic running app on React
 - [ ] Install and use basic functions from Reference JS Diff
 - [ ] Learn TypeScript MS 
-
+  - [x] Read [TypeScript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
