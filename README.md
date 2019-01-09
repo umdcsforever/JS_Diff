@@ -5,7 +5,7 @@
 ## Typescript
 ### Basic
  - [TypeScript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
-
+ - [Modern Javascript](https://javascript.info/)
 ### Note
 Research on js diff algorithm and own app to practice <br />
 [Research key points](Note/README.md)
