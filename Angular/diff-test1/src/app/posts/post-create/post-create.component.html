@@ -1,6 +1,16 @@
 <h2>The post component </h2>
 
-<textarea rows="6" [value]="Test" #postInput></textarea>
-<hr>
-<button (click)="onAddPost(postInput)">Save Post</button>
+<!-- if "'x'"" <-- text x  if "x" reference of property
+#
+-->
+<mat-card>
+  <mat-form-field>
+    <textarea matInput rows="6" [(ngModel)]="enteredValue"></textarea>
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="onAddPost()">Save Post</button>
+</mat-card>
+
 <p>{{newPost}}</p>

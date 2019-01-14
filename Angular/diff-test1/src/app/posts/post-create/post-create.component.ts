@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
 
+/* Decorator @
+define basic component
+*/
 @Component({
   templateUrl: './post-create.component.html',
-  selector : 'app-post-create'
+  selector : 'app-post-create',
+  styleUrls: ['./post-create.component.css']
 })
+
 export class PostCreateComponent {
 
+  enteredValue = '';
   newPost = 'No Content';
 
-  onAddPost(postInput: HTMLTextAreaElement) {
-    console.log(postInput);
-    this.newPost = 'the user\n is fukcing shet';
+  onAddPost() {
+    // console.log(postInput);
+    this.newPost = this.enteredValue;
   }
 
 }
