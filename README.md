@@ -14,9 +14,9 @@
 - [x] Construct basic running app on Angualr 
   - [ ] M.E.A.N Stack Environment Setup
     - [ ] Mongo DB 
-    - [ ] Express.js
+    - [x] Express.js
     - [x] Angular.js
-    - [ ] Node.js
+    - [x] Node.js
 - [ ] Construct basic running app on React
 - [ ] Install and use basic functions from Reference JS Diff
 - [ ] Learn TypeScript MS 
