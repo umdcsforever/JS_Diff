@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { NgForm } from '@angular/forms';
+import { PostsService } from '../post.service';
 /* Decorator @
 define basic component
 */
@@ -11,12 +13,19 @@ define basic component
 
 export class PostCreateComponent {
 
-  enteredValue = '';
-  newPost = 'No Content';
+  enteredContent = '';
+  enteredTitle = '';
 
-  onAddPost() {
+  constructor(public postsService: PostsService) {}
+
+  onAddPost(form: NgForm) {
     // console.log(postInput);
-    this.newPost = this.enteredValue;
+    // this.newPost = this.enteredValue;
+    if (form.invalid) {
+      return;
+    }
+    this.postsService.addPost(form.value.title, form.value.content);
+    form.resetForm();
   }
 
 }

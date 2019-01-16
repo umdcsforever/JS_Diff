@@ -1,0 +1,9 @@
+/*which targets element itselt*/
+:host{
+  display: block;
+  margin-top: 1rem auto;
+}
+
+.info-text {
+  text-align: center;
+}
