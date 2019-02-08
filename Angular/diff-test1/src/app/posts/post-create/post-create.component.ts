@@ -7,6 +7,7 @@ define basic component
 */
 @Component({
   templateUrl: './post-create.component.html',
+  /* allows us to use that template */
   selector : 'app-post-create',
   styleUrls: ['./post-create.component.css']
 })
