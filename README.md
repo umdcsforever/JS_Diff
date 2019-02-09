@@ -12,11 +12,15 @@
 ## TODO List
 - [ ] Research on Difference Algorithm and its Variation
 - [x] Construct basic running app on Angualr 
-  - [ ] M.E.A.N Stack Environment Setup
-    - [ ] Mongo DB 
-    - [x] Express.js
-    - [x] Angular.js
-    - [x] Node.js
+- [x] M.E.A.N Stack Environment Setup
+- [x] Mongo DB
+  - [x] [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+  - [x] [Moongoose](https://mongoosejs.com/)
+- [x] [Express.js](https://github.com/expressjs/express)
+- [x] Angular.js
+- [x] Node.js
+  - [x] [Body Parser](https://www.npmjs.com/package/body-parser)
+  - [x] [Nodemon](https://www.npmjs.com/package/nodemon)
 - [ ] Construct basic running app on React
 - [ ] Install and use basic functions from Reference JS Diff
 - [ ] Learn TypeScript MS 
