@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NgForm } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { PostsService } from '../post.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Post } from '../post.model';
+import { mimeType } from './mime-type.validator';
+
 /* Decorator @
 define basic component
 */
@@ -19,6 +21,8 @@ export class PostCreateComponent implements OnInit {
   enteredTitle = '';
   post: Post;
   isLoading = false;
+  form: FormGroup;
+  imagePreview: string;
 
   private mode = 'create';
   private postId: string;
@@ -29,6 +33,19 @@ export class PostCreateComponent implements OnInit {
               public route: ActivatedRoute) {}
 
   ngOnInit() {
+    this.form = new FormGroup({
+      // ships
+      title : new FormControl(null, {
+        validators: [Validators.required, Validators.minLength(3)]
+      }),
+      content : new FormControl(null, {
+        validators: [Validators.required]
+      }),
+      image : new FormControl(null, {
+        validators: [Validators.required],
+        asyncValidators: [mimeType]
+      })
+    });
     // paramMap is an observable because parameter in the
     // url could change whilst we are on the page bc
     // some links can be clicked to load same angular comps but
@@ -41,7 +58,15 @@ export class PostCreateComponent implements OnInit {
         this.isLoading = true;
         this.postsService.getPost(this.postId).subscribe(postData => {
           this.isLoading = false;
-          this.post = {id: postData._id, title: postData.title, content: postData.content};
+          this.post = {
+            id: postData._id,
+            title: postData.title,
+            content: postData.content
+          };
+          this.form.setValue({
+            title: this.post.title,
+            content: this.post.content
+          });
         });
       }
       // tslint:disable-next-line:one-line
@@ -52,25 +77,48 @@ export class PostCreateComponent implements OnInit {
     });
   }
 
-  onSavePost(form: NgForm) {
+  onImagePicked(event: Event) {
+    // not sure event.target so convert this to type HTML
+    const file = (event.target as HTMLInputElement).files[0];
+
+    // allows you to target a ingle control
+    this.form.patchValue({image: file});
+    this.form.get('image').updateValueAndValidity();
+    // console.log(file);
+    // console.log(this.form);
+    const reader = new FileReader();
+    reader.onload = () => {
+      /* this.imagePreview = reader.result;
+         this.imagePreview = <string>reader.result;
+         this.imagePreview = reader.result as string;
+         const arr = new Uint8Array(fileReader.result).subarray(0, 4);
+         const arr = newUint8Array(<ArrayBuffer>fileReader.result).subarray(0, 4);
+         const arr = new Uint8Array(fileReader.result as ArrayBuffer).subarray(0, 4); */
+      this.imagePreview = reader.result as string;
+    };
+    reader.readAsDataURL(file);
+
+  }
+
+  onSavePost() {
     // console.log(postInput);
     // this.newPost = this.enteredValue;
-    if (form.invalid) {
+    if (this.form.invalid) {
       return;
     }
     this.isLoading = true;
     if (this.mode === 'create') {
-      this.postsService.addPost(form.value.title, form.value.content);
+      this.postsService.addPost(this.form.value.title, this.form.value.content);
     }
     // tslint:disable-next-line:one-line
     else {
       this.postsService.updatePost(
         this.postId,
-        form.value.title,
-        form.value.content
+        this.form.value.title,
+        this.form.value.content
       );
     }
-    form.resetForm();
+    this.form.reset();
   }
 
 }
