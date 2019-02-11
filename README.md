@@ -25,3 +25,40 @@
 - [ ] Install and use basic functions from Reference JS Diff
 - [ ] Learn TypeScript MS 
   - [x] Read [TypeScript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+
+## Study Materials
+- [ ] background-attachment
+- [ ] background-position
+- [ ] text-transform
+  - [ ] background-size: cover;
+- [ ] html <footer>
+- [ ] jquery setTimeout
+#### Angular
+- [ ] event binding
+- [ ] two way binding
+- [ ] ngModel : directive
+- [ ] structural directive
+- [ ] *ngFro
+- [ ] *ngIf
+- [ ] EventEmitter class
+- [ ] #postForm="ngForm"
+- [ ] Observable.
+- [ ] rxjs
+#### Typescript
+- [ ] spread opertaor
+- [ ] constructor(public x:type)
+#### Node js npm install --save-dev nodemon
+#### 2/9
+- [ ] css: flex
+- [ ] Subject
+- [ ] elvis operator , ex) post?.title - check whether post exists before it tries to read property
+- [ ] Spinner
+- [ ] template drive approach vs reactive approach
+- [ ] temp : let Angular infer everyhing 
+- [ ] reactive: define everyhing in our TS code and tell Angular which of our defined controls, defined by us in TS maps to which input here.
+#### 2/10
+- [ ] FormGroup
+- [ ] FormControl
+- [ ] $event
+- [ ] form.patchValue() 
+- [ ] Promise: default js object
