@@ -17,6 +17,7 @@
   - [x] [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
   - [x] [Moongoose](https://mongoosejs.com/)
 - [x] [Express.js](https://github.com/expressjs/express)
+  - [x] [Multer](https://github.com/expressjs/multer) : Node.js middleware for handling `multipart/form-data`.
 - [x] Angular.js
 - [x] Node.js
   - [x] [Body Parser](https://www.npmjs.com/package/body-parser)
