@@ -63,3 +63,9 @@
 - [ ] $event
 - [ ] form.patchValue() 
 - [ ] Promise: default js object
+#### 2/11
+- [ ] multer
+#### 2/12
+- [ ] next gen JS feature { ...object, x: hello}
+- [ ] express.static()
+- [ ] const path = require('path') in backend
