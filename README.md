@@ -69,3 +69,6 @@
 - [ ] next gen JS feature { ...object, x: hello}
 - [ ] express.static()
 - [ ] const path = require('path') in backend
+#### 2/13
+- [ ] import { AbstractControl } from '@angular/forms': AbstractControl
+- [ ] rxjs: of <- quick and easy way of adding or creating an observable which will emit data immediately
