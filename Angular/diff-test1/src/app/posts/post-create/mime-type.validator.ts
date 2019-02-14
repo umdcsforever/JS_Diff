@@ -3,11 +3,14 @@ have the task of getting the value of a control which will be file then
 read that using that file reader again and checking for the mime type of file
 */
 import { AbstractControl } from '@angular/forms';
-import { Observable, Observer } from 'rxjs';
+import { Observable, Observer, of } from 'rxjs';
 
 // special return type Validator. key, value and error code
 export const mimeType = (control: AbstractControl):
   Promise<{ [key: string]: any }> | Observable<{ [key: string]: any }> => {
+    if (typeof(control.value === 'string')) {
+      return of(null);
+    }
   const file = control.value as File;
   const fileReader = new FileReader();
   const frObs = Observable.create((observer: Observer<{ [key: string]: any }>) => {
