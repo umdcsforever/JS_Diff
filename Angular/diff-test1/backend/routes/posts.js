@@ -84,18 +84,40 @@ router.put("/:id", multer({storage: storage}).single("image"), (req, res, next) 
 
 router.get('', (req, res, next) => {
   // res.send('Hello from express!');
+  // console.log(req.query);
 
+  // if they are not defined, they are undefined objs
+  // they are always string because coming from url so add +infront
+  const pageSize = +req.query.pageSize;
+  const currentPage = +req.query.page;
+
+  // mongoose chain multiple queries
+  const postQuery = Post.find();
+  let fetchedPosts;
+  if(pageSize && currentPage){
+    //extremely large data may be inefficient but still works for just large ones
+    postQuery
+      .skip(pageSize * (currentPage - 1))
+      .limit(pageSize);
+  }
   // fetch data
   // find return all entry or can be narrowed down to certain topic
-  Post.find().then(documents => {
+  postQuery.find()
+    .then(documents => {
+      fetchedPosts = documents;
+      return Post.count();
 
-    // fetching is asynchronous so needs to wait for it to finish
-    res.status(200).json({
-      message: 'Posts fetched succesfully',
-      posts: documents
+      // fetching is asynchronous so needs to wait for it to finish
+      //
+      // console.log(documents);
+    })
+    .then(count => {
+      res.status(200).json({
+          message: 'Posts fetched succesfully',
+          posts: fetchedPosts,
+          maxPosts: count
+      });
     });
-    console.log(documents);
-  });
 
 });
 
