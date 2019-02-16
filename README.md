@@ -72,3 +72,7 @@
 #### 2/13
 - [ ] import { AbstractControl } from '@angular/forms': AbstractControl
 - [ ] rxjs: of <- quick and easy way of adding or creating an observable which will emit data immediately
+#### 2/15
+- [ ] onChangedPage($event) => event : PageEvent, some data about the current page 
+- [ ] Css: rem vs px vs em, 1rem ~= 16px
+- [ ] backtick: ` special JS feature which allows us to dynamically add values into a normal strnig
