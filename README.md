@@ -76,3 +76,13 @@
 - [ ] onChangedPage($event) => event : PageEvent, some data about the current page 
 - [ ] Css: rem vs px vs em, 1rem ~= 16px
 - [ ] backtick: ` special JS feature which allows us to dynamically add values into a normal strnig
+#### 2/16
+- [ ] formcontrolName: matInput mat-form-field
+- [ ] vscode: Ctrl+Shift+K = delete line same as sublime
+- [ ] input validator: email required
+- [ ] npm install --save mongoose-unique-validator: add this validation to logic in backend
+- [ ] npm install --save bcrypt : package offers encryption funcs which we can use in Nodejs bcrypt: saltOrRound : simply means that higher the number here, the longer it will take but the safer it will be becuase it uses math to generate random number and geneare hash
+- [ ] cyclic dependency
+- [ ] JWT: Json Web Token , npm install --save jsonwebtoken
+- [ ]vscode Shift+Alt+F format Json object
+- [ ] token header, "Bearer ", use convention to indicate that you added such a token to authorization. value to that header which uses a word "anything" then the token.
