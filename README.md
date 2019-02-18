@@ -84,5 +84,8 @@
 - [ ] npm install --save bcrypt : package offers encryption funcs which we can use in Nodejs bcrypt: saltOrRound : simply means that higher the number here, the longer it will take but the safer it will be becuase it uses math to generate random number and geneare hash
 - [ ] cyclic dependency
 - [ ] JWT: Json Web Token , npm install --save jsonwebtoken
-- [ ]vscode Shift+Alt+F format Json object
+- [ ] vscode Shift+Alt+F format Json object
 - [ ] token header, "Bearer ", use convention to indicate that you added such a token to authorization. value to that header which uses a word "anything" then the token.
+#### 2/17
+- [ ] route guard: angular add some interfaces your classes can implement which forces the classes to add certain methods which the @angular/router can execute before it loads a route to check whether it should proceed or do something else. something like protect route
+- [ ] NodeJS.Timer
