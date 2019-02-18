@@ -3,13 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { PostCreateComponent } from './posts/post-create/post-create.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { AuthGuard } from './auth/auth-guard';
 
 const routes: Routes = [
   // { path: '', component: },
   { path : '', component: PostListComponent},
   // you don't add '/create', just 'create'
-  { path : 'create', component: PostCreateComponent},
-  { path : 'edit/:postId', component: PostCreateComponent}
+  { path : 'create', component: PostCreateComponent, canActivate: [AuthGuard]},
+  { path : 'edit/:postId', component: PostCreateComponent, canActivate: [AuthGuard]},
+
+  { path : 'login', component: LoginComponent },
+  { path : 'signup', component: SignupComponent},
 ];
 
 /*
@@ -23,6 +29,7 @@ about handling incoming request and sending back response.
 // routes are js object which url is presented
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }

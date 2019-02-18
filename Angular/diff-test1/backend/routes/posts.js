@@ -3,6 +3,7 @@ const multer = require('multer');
 
 // capital letter indicate this is object based blue print
 const Post = require('../models/post');
+const checkAuth = require('../middleware/check-auth');
 
 const router = express.Router();
 
@@ -33,7 +34,8 @@ const storage = multer.diskStorage({
 // multer(storage).single("image") = expecting a single file and pass image as an arg
 // as string, try to extract a single file from the incoming rqe and it tries to find
 // it on an image prop in the req body
-router.post("", multer({storage: storage}).single("image"), (req, res, next) => {
+router.post("", checkAuth,
+multer({storage: storage}).single("image"), (req, res, next) => {
 
   // http + :// host  == domain
   const url = req.protocol + "://" + req.get("host");
@@ -133,6 +135,7 @@ router.get("/:id", (req, res, next) => {
 });
 
 // delete trquest you send id or identifier as part of url
+// add token to validate authentication
 router.delete("/:id", (req, res, next) => {
   console.log(req.params.id);
 
