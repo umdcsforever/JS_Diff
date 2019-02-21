@@ -1,56 +1,51 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { PostsService } from '../post.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+
+import { PostsService } from '../posts.service';
 import { Post } from '../post.model';
 import { mimeType } from './mime-type.validator';
+import { Subscription } from 'rxjs';
+import { AuthService } from 'src/app/auth/auth.service';
 
-/* Decorator @
-define basic component
-*/
 @Component({
+  selector: 'app-post-create',
   templateUrl: './post-create.component.html',
-  /* allows us to use that template */
-  selector : 'app-post-create',
   styleUrls: ['./post-create.component.css']
 })
-export class PostCreateComponent implements OnInit {
-
-  enteredContent = '';
+export class PostCreateComponent implements OnInit, OnDestroy {
   enteredTitle = '';
+  enteredContent = '';
   post: Post;
   isLoading = false;
   form: FormGroup;
-  imagePreview: string;
-
+  imagePreview: string | ArrayBuffer;
   private mode = 'create';
   private postId: string;
+  private authStatusSub: Subscription;
 
-
-  // ActivatedRoute include routing info
-  constructor(public postsService: PostsService,
-              public route: ActivatedRoute) {}
+  constructor(
+    public postsService: PostsService,
+    public route: ActivatedRoute,
+    public authService: AuthService
+  ) {}
 
   ngOnInit() {
+    this.authStatusSub = this.authService
+    .getAuthStatusListener()
+    .subscribe(authStatus => {
+      this.isLoading = false;
+    });
     this.form = new FormGroup({
-      // ships
-      title : new FormControl(null, {
+      title: new FormControl(null, {
         validators: [Validators.required, Validators.minLength(3)]
       }),
-      content : new FormControl(null, {
-        validators: [Validators.required]
-      }),
-      image : new FormControl(null, {
+      content: new FormControl(null, { validators: [Validators.required] }),
+      image: new FormControl(null, {
         validators: [Validators.required],
         asyncValidators: [mimeType]
       })
     });
-    // paramMap is an observable because parameter in the
-    // url could change whilst we are on the page bc
-    // some links can be clicked to load same angular comps but
-    // for different post id,
-    // we can now listen to the routes and updates
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       if (paramMap.has('postId')) {
         this.mode = 'edit';
@@ -71,9 +66,7 @@ export class PostCreateComponent implements OnInit {
             image: this.post.imagePath
           });
         });
-      }
-      // tslint:disable-next-line:one-line
-      else {
+      } else {
         this.mode = 'create';
         this.postId = null;
       }
@@ -81,31 +74,17 @@ export class PostCreateComponent implements OnInit {
   }
 
   onImagePicked(event: Event) {
-    // not sure event.target so convert this to type HTML
     const file = (event.target as HTMLInputElement).files[0];
-
-    // allows you to target a ingle control
-    this.form.patchValue({image: file});
+    this.form.patchValue({ image: file });
     this.form.get('image').updateValueAndValidity();
-    // console.log(file);
-    // console.log(this.form);
     const reader = new FileReader();
     reader.onload = () => {
-      /* this.imagePreview = reader.result;
-         this.imagePreview = <string>reader.result;
-         this.imagePreview = reader.result as string;
-         const arr = new Uint8Array(fileReader.result).subarray(0, 4);
-         const arr = newUint8Array(<ArrayBuffer>fileReader.result).subarray(0, 4);
-         const arr = new Uint8Array(fileReader.result as ArrayBuffer).subarray(0, 4); */
-      this.imagePreview = reader.result as string;
+      this.imagePreview = reader.result;
     };
     reader.readAsDataURL(file);
-
   }
 
   onSavePost() {
-    // console.log(postInput);
-    // this.newPost = this.enteredValue;
     if (this.form.invalid) {
       return;
     }
@@ -114,10 +93,9 @@ export class PostCreateComponent implements OnInit {
       this.postsService.addPost(
         this.form.value.title,
         this.form.value.content,
-        this.form.value.image);
-    }
-    // tslint:disable-next-line:one-line
-    else {
+        this.form.value.image
+      );
+    } else {
       this.postsService.updatePost(
         this.postId,
         this.form.value.title,
@@ -128,4 +106,7 @@ export class PostCreateComponent implements OnInit {
     this.form.reset();
   }
 
+  ngOnDestroy() {
+    this.authStatusSub.unsubscribe();
+  }
 }
