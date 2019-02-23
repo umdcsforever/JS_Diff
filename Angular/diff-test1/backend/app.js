@@ -15,7 +15,9 @@ const app = express();
 //   next();
 // });
 
-mongoose.connect("mongodb+srv://max:9Wqd3GYssgsXL8D@cluster0-r1h12.mongodb.net/node-angular?retryWrites=true")
+mongoose.connect("mongodb+srv://max:" +
+  process.env.MONGO_ATLAS_PW +
+  "@cluster0-r1h12.mongodb.net/node-angular?retryWrites=true")
 .then(() => {
   console.log('Connection Succeed!');
 })
