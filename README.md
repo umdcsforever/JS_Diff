@@ -89,3 +89,12 @@
 #### 2/17
 - [ ] route guard: angular add some interfaces your classes can implement which forces the classes to add certain methods which the @angular/router can execute before it loads a route to check whether it should proceed or do something else. something like protect route
 - [ ] NodeJS.Timer
+#### 2/18
+- [ ] mongoose.Schema.Types.ObjectId : Mongoose manages it as a separate type.
+#### 2/20
+- [ ] tab operator : we can subscribe in the componenets and utilize an operator, allows us to execute some actions before the observable is done
+- [ ] angular dialog
+- [ ] catchError/throwError
+- [ ] in app.module.ts : @ngModel({ entryComponents })
+- [ ] constructor(@Inject()) {} : allows you to specify a special token that will be injected to Angular
+- [ ] backend: controller optimization by separating functions by module.exports
