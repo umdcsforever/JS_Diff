@@ -98,3 +98,13 @@
 - [ ] in app.module.ts : @ngModel({ entryComponents })
 - [ ] constructor(@Inject()) {} : allows you to specify a special token that will be injected to Angular
 - [ ] backend: controller optimization by separating functions by module.exports
+#### 2/23 Performance
+- [ ] RouterModule.forChilde(routes) : will be merged with the root router eventually and pass in the routes
+- [ ] Route = [{path, loadChildren,] : path which starts in the current folder and then go into the child
+- [ ] lazyLoading : load module only when we need it
+- [ ] environment variables in environments/environment.ts: global variable which we can import in our files and we  can even change them for the prod and dev mode, localhost vs domain.com
+- [ ] Node global variables, for NODEJS these global variables are injected into the running Node process and there we can access them on the spcial process: "process.env" resource: https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html
+- [ ] Read about Nginx 
+//Angular 7 Deep Dive
+- [ ] Bootstrap3!!! npm install --save bootstrap@3
+- [ ] decorator: ts feature which allow you to enhance your calsses , 
