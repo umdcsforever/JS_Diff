@@ -108,3 +108,12 @@
 //Angular 7 Deep Dive
 - [ ] Bootstrap3!!! npm install --save bootstrap@3
 - [ ] decorator: ts feature which allow you to enhance your calsses , 
+#### 2/26
+- [ ] innerHTML vs innerText
+#### 2/28
+- [ ] The MDN (Mozilla Developer Network) offers nice lists of all properties and events of the element you're interested in. Googling for YOUR_ELEMENT properties  or YOUR_ELEMENT events  should yield nice results.
+- [ ] ng-template
+- [ ] *ngIf="value; else #template" (Structural Directive)
+- [ ] Unlike structural directives, attribute directives don't add or remove elements. They change the elements they were placed on.
+- [ ] [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{online: serverStatus === 'online'}"
