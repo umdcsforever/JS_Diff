@@ -117,3 +117,17 @@
 - [ ] Unlike structural directives, attribute directives don't add or remove elements. They change the elements they were placed on.
 - [ ] [ngStyle]="{backgroundColor: getColor()}"
   [ngClass]="{online: serverStatus === 'online'}"
+ #### 3/1
+- [ ] Emmet Abbreviation (https://docs.emmet.io/abbreviations/)
+- [ ] Chrome Developer Tool Source! how to use
+- [ ] Augury
+
+#### 3/2
+- [ ] @Input() decorator to allow a property to be used outside of the current component, any component hosting the current comp by using the selector can use this property
+- [ ] @Output('alias')
+- [ ] read about _ngcontnet-ejo-2 which is style encapsulation, the way it does it is that it simply gives the same attribute to all elements in a component
+- [ ] read about shadow DOM
+- [ ] encapsulation in @Component()
+- [ ] @ViewChild('alias')
+- [ ] Angular Lifecycle : ngOnChanges, ngOnInit (run after constructor), ngDoCheck, ngAfterContentInit, ngAfterContentChecked, ngAfterViewInit, ngAfterViewChecked, ngOnDestroy
+- [ ] @ContentChild
