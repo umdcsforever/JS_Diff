@@ -131,3 +131,10 @@
 - [ ] @ViewChild('alias')
 - [ ] Angular Lifecycle : ngOnChanges, ngOnInit (run after constructor), ngDoCheck, ngAfterContentInit, ngAfterContentChecked, ngAfterViewInit, ngAfterViewChecked, ngOnDestroy
 - [ ] @ContentChild
+#### 3/3
+- [ ] cannot have more than one structural directive on the same element.
+- [ ] xxx.directive.ts , export class XxxDirective and @Directive ({ selector: '[appBasicHightlight]' })
+- [ ] Renderer2: using this with directive is better approach because angular is not limited to running in the browser here, for service workers where they do not have accees to DOM, this is better practice to render accessing DOM
+- [ ] [Renderer2 Class](https://angular.io/api/core/Renderer2)
+- [ ] What is the difference btw Renderer 1, 2, and 3 and so on ??
+- [ ] @HostBinding('style.backgroundColor') backgroundColor = 'transparent';
