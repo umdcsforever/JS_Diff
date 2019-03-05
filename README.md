@@ -138,3 +138,6 @@
 - [ ] [Renderer2 Class](https://angular.io/api/core/Renderer2)
 - [ ] What is the difference btw Renderer 1, 2, and 3 and so on ??
 - [ ] @HostBinding('style.backgroundColor') backgroundColor = 'transparent';
+#### 3/4
+- [ ] ng-template is element which itself is not rendered but allows us to define a template for angular to use once it determines that this template needs to be rendered
+- [ ] @Input() set unless() : set makes the property a function but still property.
