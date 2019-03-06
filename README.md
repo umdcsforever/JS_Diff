@@ -141,3 +141,6 @@
 #### 3/4
 - [ ] ng-template is element which itself is not rendered but allows us to define a template for angular to use once it determines that this template needs to be rendered
 - [ ] @Input() set unless() : set makes the property a function but still property.
+#### 3/5
+- [ ] @Component({ providers:  [aService]}), there is providers key in @Component
+- [ ] @Injectable({providedIn: 'root'}) export class MyService, this is Angular 6 feature which is same as @NgModule({providers: [MyService] }). This new feature is completely optional. This offers an advantage : Services can be loaded lazily by Angular and redundant code can be removed, leading to a better performance and loading speed. 
