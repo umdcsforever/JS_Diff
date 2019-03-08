@@ -144,3 +144,13 @@
 #### 3/5
 - [ ] @Component({ providers:  [aService]}), there is providers key in @Component
 - [ ] @Injectable({providedIn: 'root'}) export class MyService, this is Angular 6 feature which is same as @NgModule({providers: [MyService] }). This new feature is completely optional. This offers an advantage : Services can be loaded lazily by Angular and redundant code can be removed, leading to a better performance and loading speed. 
+#### 3/8
+- [ ] EventEmitter is also an observable so you can actully emit it and subscribe from child to parent Component using Service.
+- [ ] Routes = [ { path: ''}], for the path, don't add slash at the beginnig.
+- [ ] <router-outlet></router-outlet> : this element simply marks the place in our document where we want  the angular router to load the component of the currently selected route
+- [ ] <a href=""> this will reload the app which the app state might reset, so use <a routerLink="/">
+- [ ] routerLinkActive="CSSclassName"
+- [ ] [routerLinkActiveOptions]="{exact: true}" reserved property tell angular this router active class ???
+- [ ] ActivatedRoute: simply injects the currently active routes of four to component you load it
+- [ ] { path: 'users/:id', component: UserComponent }, /: meaning dynamic variable id
+- [ ] this.route.params.subscribe() route: ActivatedRoute : this is observable from 3rd party lib where it allows Ng to use asynchronous tasks, So. this fires whenever route.params is changed.
