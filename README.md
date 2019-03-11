@@ -154,3 +154,14 @@
 - [ ] ActivatedRoute: simply injects the currently active routes of four to component you load it
 - [ ] { path: 'users/:id', component: UserComponent }, /: meaning dynamic variable id
 - [ ] this.route.params.subscribe() route: ActivatedRoute : this is observable from 3rd party lib where it allows Ng to use asynchronous tasks, So. this fires whenever route.params is changed.
+#### 3/9
+- [ ] ActivatedRoute
+- [ ] [queryParams] another bindable property of routerLink directive , not a new directive, this is for parameter in URL
+- [ ] routerLink, fragment this is hash # in URL
+- [ ] retrieving queryParams and fragment data programmatically: this.route.queryParams.subscribe(); this.route.fragment.subscribe();
+- [ ] this.router.navigate(['edit',{relativeTo: this.route}]);
+- [ ] Route Guard
+#### 3/10
+- [ ] CanActivate interface, canActivate function
+- [ ] Promise study about this object
+- [ ] interface vs abstract
