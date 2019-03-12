@@ -165,3 +165,7 @@
 - [ ] CanActivate interface, canActivate function
 - [ ] Promise study about this object
 - [ ] interface vs abstract
+- [ ] Observable : Various Data Sources.
+- [ ] Subject : like an observable but it allows you to conveniently push it to emit new data during you code
+- [ ] Subject is Observable and Observer at the same time.
+- [ ] RxJS Operator: allow you to transform data you receive to something else and still stay inside the observable world
