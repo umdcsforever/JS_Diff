@@ -7,7 +7,7 @@ export class RecipeService {
     new Recipe(
       'Korean Fried Chicken',
       '양념 치킨',
-      'https://cdn.pixabay.com/photo/2015/02/19/08/26/chicken-641881_960_720.jpg',
+      'https://i.pinimg.com/originals/0d/69/8e/0d698e153d448897d7bff67c112776e6.jpg',
       [
         new Ingredient('Meat' , 1),
         new Ingredient('French Fries' , 20),
@@ -22,7 +22,7 @@ export class RecipeService {
       ])
   ];
 
-  recipeSelected = new EventEmitter<Recipe>();
+  // recipeSelected = new EventEmitter<Recipe>();
 
   getRecipe(index: number){
     return this.recipes[index];
