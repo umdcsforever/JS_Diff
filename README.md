@@ -169,3 +169,18 @@
 - [ ] Subject : like an observable but it allows you to conveniently push it to emit new data during you code
 - [ ] Subject is Observable and Observer at the same time.
 - [ ] RxJS Operator: allow you to transform data you receive to something else and still stay inside the observable world
+#### 3/13
+- [ ] <form (ngSubmit), event made available by ngsubmit whenever the form is submitted 
+- [ ]<form (ngSubmit)="onSubmit(f)" #f="ngForm"> : telling angular give me access to this form you created automatically how to get accesss to the form to this javascript object created by anuglar automatically
+- [ ] angular form list of Validators class https://angular.io/api/forms/Validators
+- [ ] Template approach directives https://angular.io/api?type=directive
+#### 3/15
+- [ ] ngModelGroup and userData="ngModelGroup"
+- [ ] form: NgForm, form.setValue - to set all of the values in the form, patchValue = you can defind specifics to override, not necessarilly all of the values.
+#### 3/16
+- [ ] template form approach, input [pattern] validator: will hckec the user input against a regular expression
+#### 3/17
+- [ ] Pipes, uppercase, date
+- [ ] VSCode: extension Colonize, shift + enter Insert semicolon at the end of line and continue on the same line alt + enter Insert semicolon at the end of line and continue on the new line, ctrl + alt + enter Insert semicolon and stay at the same position
+- [ ] BS4, primary, secondary, success, danger, warning, info, light, and dark
+- [ ] this.http.post('url', servers); > this post method of the built in HTTP library will only create an observable, this observable wraps the configured request but won't send the request yet. The reason for this is since we use an observable to subscribe to it and react to any response, if we have such an observable and we don't subscribe to it then we don't subscribe to it at all. Becuase there is not one to listen for the response. As long as we don't subscribe, the request won't be sent.
