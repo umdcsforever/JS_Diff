@@ -184,3 +184,11 @@
 - [ ] VSCode: extension Colonize, shift + enter Insert semicolon at the end of line and continue on the same line alt + enter Insert semicolon at the end of line and continue on the new line, ctrl + alt + enter Insert semicolon and stay at the same position
 - [ ] BS4, primary, secondary, success, danger, warning, info, light, and dark
 - [ ] this.http.post('url', servers); > this post method of the built in HTTP library will only create an observable, this observable wraps the configured request but won't send the request yet. The reason for this is since we use an observable to subscribe to it and react to any response, if we have such an observable and we don't subscribe to it then we don't subscribe to it at all. Becuase there is not one to listen for the response. As long as we don't subscribe, the request won't be sent.
+#### 3/20
+- [ ] npm install --save firebase
+- [ ] firebase.initializeApp(); call method which expects to get a js object as an argument and this object can be retrieved from your back end (firebase) 
+- [ ] Firebase 5.x or higher (you can check the package.json  file to find out), you should use getIdToken()  for obtaining the token, NOT getToken()  as shown in the next lectures.
+#### 3/21
+- [ ] CommonModule is needed if we separate the AppModules into different multiple. AppModule has BrowserModule which include CommonMoudle anyway,
+#### 3/23
+- [ ] Core module that only uses Components or Directives that are used on the Root AppModule.
