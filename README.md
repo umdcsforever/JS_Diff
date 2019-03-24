@@ -192,3 +192,17 @@
 - [ ] CommonModule is needed if we separate the AppModules into different multiple. AppModule has BrowserModule which include CommonMoudle anyway,
 #### 3/23
 - [ ] Core module that only uses Components or Directives that are used on the Root AppModule.
+#### 3/24
+- [ ] Ahead of time Compilation
+- [ ] Preload the lazy loaded moduels RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})
+- [ ] new http from Angular @angular/common/http
+- [ ] httpClient.get(url, { observe: 'response', responseType: 'text' //'json' is default. observe allows to select a specific chunk of the response. such as full respons = 'response' or body only = 'body', responseType= 'blob', 'array' etc...
+- [ ] httpClient.put(url, data, option) option = {
+observe: 'body', headers: ''}
+- [ ] in the response for the reportProgress: true, it returns loaded and total. you can provide progress by loaded/total = %of data tarnsmitted or uploaded.
+- [ ] To use the HttpInterceptor, in a module, providers, use {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+- [ ] pipe operator: tab ===do , allow execution of some functions without consuming it, more like inbetween steps before subscribe
+- [ ] Interceptor order is also important!
+- [ ] NgRx and Application State: 
+- [ ] Reducer is triggered when action is dispatched there for we get 2 things: state and action
+
