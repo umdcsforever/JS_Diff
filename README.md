@@ -190,9 +190,9 @@
 - [ ] Firebase 5.x or higher (you can check the package.json  file to find out), you should use getIdToken()  for obtaining the token, NOT getToken()  as shown in the next lectures.
 #### 3/21
 - [ ] CommonModule is needed if we separate the AppModules into different multiple. AppModule has BrowserModule which include CommonMoudle anyway,
-#### 3/23
+#### 3/22
 - [ ] Core module that only uses Components or Directives that are used on the Root AppModule.
-#### 3/24
+#### 3/23
 - [ ] Ahead of time Compilation
 - [ ] Preload the lazy loaded moduels RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})
 - [ ] new http from Angular @angular/common/http
@@ -205,4 +205,18 @@ observe: 'body', headers: ''}
 - [ ] Interceptor order is also important!
 - [ ] NgRx and Application State: 
 - [ ] Reducer is triggered when action is dispatched there for we get 2 things: state and action
+#### 3/24
+- [ ] Reducer, State, Actions.
+- [ ] ActionReducerMap allow us to navigate to registered reducers: export const reducers: ActionReducerMap<AppState>, clean and central place where we manange reducers
+- [ ] StoreModule.forRoot(reducers) reducers from ActionReducerMap in AppModule Import
+- [ ] understand switchMap operator : ? does not re-wrap the return value which is observable. 
+- [ ] side-effect
+- [ ] Actions from '@ngrx/effects' holds information about all of the registered actions in the application. (like list of actions declared in the constructor)
+- [ ] Big diffrerence between SideEffect and Reducer is that in sideEffect, you do not change the state of the store.
+- [ ] from operator : turns Promise into Observable
+- [ ]  @Effect(dispatch: false) don't plan on dispatching a new action at the end 
+- [ ] Use Ngrx only to span multiple components inside the app
+- [ ] StoreModule.forFeature(); this is used in the imports [] inside of the lazyloaded module like recipes . (not like forRoot) it tells add reducers and it's state to global states and once the lazily modules load, ngrx addes them into the application.
+- [ ] export interface FeatureState extends fromApp.AppState: this means interface aware of the application AppState from fromApp and extends what's in the AppState as well as what's in the FeatureState
+- [  ]withLatestFrom()
 
