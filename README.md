@@ -218,5 +218,12 @@ observe: 'body', headers: ''}
 - [ ] Use Ngrx only to span multiple components inside the app
 - [ ] StoreModule.forFeature(); this is used in the imports [] inside of the lazyloaded module like recipes . (not like forRoot) it tells add reducers and it's state to global states and once the lazily modules load, ngrx addes them into the application.
 - [ ] export interface FeatureState extends fromApp.AppState: this means interface aware of the application AppState from fromApp and extends what's in the AppState as well as what's in the FeatureState
-- [  ]withLatestFrom()
+- [ ] withLatestFrom()
+#### 3/25
+- [ ] Animation
+- [ ]  @Component({ animations: [] }) 
+- [ ] Animation is journey from one state to another state
+- [ ] trigger('divState, [ state(), state, transition()]), transition() allows us to describe how the transition from one state to another state should look like or should animate.
+- [ ] transition('void => *', animate(300)) void is reserved state name. for casese where element was not added in the DOM in the beginning
+- [ ] transition('void => *', [ animate(1000, keyframes()) ]) : allows me to be more precise which part of the different styles I can set up and occur at different timing
 
