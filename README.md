@@ -226,4 +226,8 @@ observe: 'body', headers: ''}
 - [ ] trigger('divState, [ state(), state, transition()]), transition() allows us to describe how the transition from one state to another state should look like or should animate.
 - [ ] transition('void => *', animate(300)) void is reserved state name. for casese where element was not added in the DOM in the beginning
 - [ ] transition('void => *', [ animate(1000, keyframes()) ]) : allows me to be more precise which part of the different styles I can set up and occur at different timing
-
+#### 3/28
+- [ ] Review Angular 7 and Angular Mateiral
+- [ ] Review NgRX
+- [ ] Study Angular Materal and Bootstrap 4
+- [ ] App Design Start
