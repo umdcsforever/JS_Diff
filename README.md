@@ -35,19 +35,19 @@
 - [ ] html <footer>
 - [ ] jquery setTimeout
 #### Angular
-- [ ] event binding
-- [ ] two way binding
+- [x] event binding
+- [x] two way binding
 - [ ] ngModel : directive
 - [ ] structural directive
-- [ ] *ngFro
-- [ ] *ngIf
-- [ ] EventEmitter class
-- [ ] #postForm="ngForm"
-- [ ] Observable.
-- [ ] rxjs
+- [x] *ngFro
+- [x] *ngIf
+- [x] EventEmitter class
+- [x] #postForm="ngForm"
+- [x] Observable.
+- [x] rxjs
 #### Typescript
-- [ ] spread opertaor
-- [ ] constructor(public x:type)
+- [x] spread opertaor
+- [x] constructor(public x:type)
 #### Node js npm install --save-dev nodemon
 #### 2/9
 - [ ] css: flex
